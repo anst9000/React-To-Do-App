@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+body {
+  background-color: #9266ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: #3f3160;
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#to-do-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+#to-do-form input[type="text"] {
+  background-color: #d9d9d9;
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#to-do-form input[type="text"]::placeholder {
+  color: rgba(25, 25, 100, 0.4);
+}
+#to-do-form input[type="text"]:focus,
+#to-do-form input[type="submit"]:focus {
+  outline: none;
+}
+
+#to-do-form input[type="submit"] {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #ae8e1c;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+
+  transition: transform 0.2s ease;
+}
+
+#to-do-form input[type="submit"]:hover {
+  background-color: #bf9f2d;
+}
+
+#to-do-form input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+.list {
+  color: #fff;
+  width: 300px;
+  background-color: #b407ac;
+  height: 50px;
+  margin: 0 auto 20px auto;
+  border-radius: 5px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 10px;
+  position: relative;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.list span {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.faicons {
+  margin: 0 5px;
+  font-size: 15px;
 }
